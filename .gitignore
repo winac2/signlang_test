@@ -1,0 +1,8 @@
+README.txt
+.vscode/
+.env
+__pycache__/
+data/
+dataset/
+logs/
+lang/__pycache__/
