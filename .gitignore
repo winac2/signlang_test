@@ -6,3 +6,4 @@ data/
 dataset/
 logs/
 lang/__pycache__/
+.codex/

@@ -13,7 +13,7 @@ import pyttsx3 #2.91
 
 
 
-MODEL_PATH = './models/hand_gesture_model.pkl'
+MODEL_PATH = './models/hand_gesture_model_main_DrHeHoIcTh.pkl'
 model = pickle.load(open(MODEL_PATH, 'rb'))
 
 

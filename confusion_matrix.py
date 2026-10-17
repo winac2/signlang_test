@@ -1,4 +1,5 @@
-
+"SignMachine - winac2 - NSDK"
+"confusion matrix"
 import numpy as np
 import pickle
 import matplotlib.pyplot as plt
@@ -35,7 +36,7 @@ print("Classes:", model.classes_)
 
 
 # ==========================================
-# LOAD PROCESSED DATA
+# LOAD DATA - ĐÃ XỬ LÝ
 # ==========================================
 
 data = np.genfromtxt(
@@ -62,7 +63,7 @@ print("Labels:", np.unique(y))
 
 
 # ==========================================
-# CREATE SAME TEST SET AS ROC
+# TẠO TEST
 # ==========================================
 
 X_test = X

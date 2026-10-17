@@ -1,3 +1,5 @@
+"SignMachine - winac2 - NSDK"
+"ROC curve evaluate"
 import numpy as np
 import pickle 
 import matplotlib.pyplot as plt
@@ -6,9 +8,9 @@ from sklearn.metrics import roc_curve, auc
 from sklearn.model_selection import train_test_split
 
 MODEL_PATH = "./models/hand_gesture_model_main_DrHeHoIcTh.pkl"
-DATA_PATH = "./data/processed_hand_data.csv"
+DATA_PATH = "./data/processed_hand_data_test.csv"
 
-TEST_SIZE = 0.2 # TEST_SIZE = 0.2 #20% TEST SIZE
+TEST_SIZE = 1 # TEST_SIZE = 0.2 #20% TEST SIZE
 RANDOM_STATE = 42 
 
 #================================================
@@ -41,15 +43,11 @@ print("Dataset:", X.shape)
 # CREATE SAME TEST SET
 # ==========================================
 
-_, X_test, _, y_test = train_test_split(
-    X,
-    y,
-    test_size=TEST_SIZE,
-    random_state=RANDOM_STATE,
-    stratify=y
-)
+X_test = X
+y_test = y
 
 print("Test set:", X_test.shape)
+print("Number of test samples:", len(y_test))
 
 
 # ==========================================
