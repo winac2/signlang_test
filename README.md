@@ -250,6 +250,37 @@ models/
 The model receives processed hand-landmark coordinates as input and returns the predicted gesture.
 
 Mô hình nhận các tọa độ landmark đã được xử lý làm đầu vào và trả về cử chỉ được dự đoán.
+---
+
+## Model evaluate | Đánh giá mô hình
+
+ROC curve
+![roc curve](assets/ROC_curve_1.png)
+class : ['drink' 'hello' 'hot' 'iced' 'thanks']
+Dataset: (2313, 42)
+Test set: (2313, 42)
+Number of test samples: 2313
+drink: AUC = 0.8552
+hello: AUC = 0.9875
+hot: AUC = 0.9660
+iced: AUC = 0.9940
+thanks: AUC = 0.9934
+
+
+
+confusion matrix
+![CM](assets/confusion_matrix_1.png)
+Dataset: (2313, 42)
+Labels: ['drink' 'hello' 'hot' 'iced' 'thanks']
+Test set: (2313, 42)
+Number of test samples: 2313
+
+Confusion Matrix:
+[[ 74   0 222 104   0]
+ [  1 408   6   7   7]
+ [  3   0 388   0   9]
+ [  8  11   0 658   7]
+ [  4   0   6   0 390]]
 
 ---
 
