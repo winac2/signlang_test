@@ -8,6 +8,9 @@
 
 '''
 '''by "winac2-NSDK" - ndkhoi234@gmail.com'''
+
+'''trích xuất data đã xử lý từ dataset - để train model'''
+
 import os
 import numpy as np
 import cv2

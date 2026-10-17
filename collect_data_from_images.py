@@ -8,6 +8,11 @@
 
 '''
 '''by "winac2-NSDK" - ndkhoi234@gmail.com'''
+
+
+""" trích xuất data có label - để xem """
+
+
 import os
 import cv2
 import mediapipe as mp
