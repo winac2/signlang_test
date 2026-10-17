@@ -253,35 +253,46 @@ Mô hình nhận các tọa độ landmark đã được xử lý làm đầu v�
 ---
 
 ## Model evaluate | Đánh giá mô hình
-
-ROC curve
+The Random Forest model was evaluated on 2,313 samples with 42 input features across five gesture classes.
+Mô hình Random Forest được đánh giá trên 2.313 mẫu dữ liệu với 42 đặc trưng đầu vào, thuộc 5 lớp cử chỉ: drink, hello, hot, iced và thanks.
+### ROC-AUC
 ![roc curve](assets/ROC_curve_1.png)
-class : ['drink' 'hello' 'hot' 'iced' 'thanks']
-Dataset: (2313, 42)
-Test set: (2313, 42)
-Number of test samples: 2313
-drink: AUC = 0.8552
-hello: AUC = 0.9875
-hot: AUC = 0.9660
-iced: AUC = 0.9940
-thanks: AUC = 0.9934
+| Class | AUC |
+|---|---:|
+| `drink` | 0.8552 |
+| `hello` | 0.9875 |
+| `hot` | 0.9660 |
+| `iced` | 0.9940 |
+| `thanks` | 0.9934 |
 
-
-
-confusion matrix
+### Confusion Matrix
 ![CM](assets/confusion_matrix_1.png)
-Dataset: (2313, 42)
-Labels: ['drink' 'hello' 'hot' 'iced' 'thanks']
-Test set: (2313, 42)
-Number of test samples: 2313
+| Actual \ Predicted | drink | hello | hot | iced | thanks |
+|---|---:|---:|---:|---:|---:|
+| `drink` | 74 | 0 | 222 | 104 | 0 |
+| `hello` | 1 | 408 | 6 | 7 | 7 |
+| `hot` | 3 | 0 | 388 | 0 | 9 |
+| `iced` | 8 | 11 | 0 | 658 | 7 |
+| `thanks` | 4 | 0 | 6 | 0 | 390 |
 
-Confusion Matrix:
-[[ 74   0 222 104   0]
- [  1 408   6   7   7]
- [  3   0 388   0   9]
- [  8  11   0 658   7]
- [  4   0   6   0 390]]
+### Performance Summary | Tổng hợp hiệu suất
 
+| Class | Correct Predictions | Recall |
+|---|---:|---:|
+| `drink` | 74/400 | 18.50% |
+| `hello` | 408/429 | 95.10% |
+| `hot` | 388/400 | 97.00% |
+| `iced` | 658/684 | 96.20% |
+| `thanks` | 390/400 | 97.50% |
+| **Overall Accuracy - Độ chính xác tổng thể** | **1918/2313** | **82.92%** |
+
+### Conclusion | Kết luận
+
+The model achieves an overall accuracy of **82.92%**. Four classes (`hello`, `hot`, `iced`, and `thanks`) achieve recall above 95%. However, `drink` has a low recall of 18.50%, mainly due to misclassification as `hot` and `iced`.
+Mô hình đạt độ chính xác tổng thể 82,92%. Bốn lớp hello, hot, iced và thanks có Recall trên 95%. Tuy nhiên, lớp drink chỉ đạt 18,50%, chủ yếu do bị nhầm thành hot và iced.
+
+Future improvements should focus on collecting additional training data, verifying labels, and improving discrimination between similar gestures. Evaluation on an independent test set is necessary to assess generalization performance.
+Hướng cải thiện tiếp theo là bổ sung dữ liệu huấn luyện, kiểm tra nhãn và tăng khả năng phân biệt giữa các cử chỉ tương đồng. Cần đánh giá trên tập dữ liệu độc lập để xác định khả năng tổng quát hóa của mô hình.
 ---
 
 ## 📁 Important Files | Các file quan trọng
