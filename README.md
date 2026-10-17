@@ -254,6 +254,7 @@ Mô hình nhận các tọa độ landmark đã được xử lý làm đầu v�
 
 ## Model evaluate | Đánh giá mô hình
 The Random Forest model was evaluated on 2,313 samples with 42 input features across five gesture classes.
+
 Mô hình Random Forest được đánh giá trên 2.313 mẫu dữ liệu với 42 đặc trưng đầu vào, thuộc 5 lớp cử chỉ: drink, hello, hot, iced và thanks.
 ### ROC-AUC
 ![roc curve](assets/ROC_curve_1.png)
@@ -289,9 +290,11 @@ Mô hình Random Forest được đánh giá trên 2.313 mẫu dữ liệu với
 ### Conclusion | Kết luận
 
 The model achieves an overall accuracy of **82.92%**. Four classes (`hello`, `hot`, `iced`, and `thanks`) achieve recall above 95%. However, `drink` has a low recall of 18.50%, mainly due to misclassification as `hot` and `iced`.
+
 Mô hình đạt độ chính xác tổng thể 82,92%. Bốn lớp hello, hot, iced và thanks có Recall trên 95%. Tuy nhiên, lớp drink chỉ đạt 18,50%, chủ yếu do bị nhầm thành hot và iced.
 
 Future improvements should focus on collecting additional training data, verifying labels, and improving discrimination between similar gestures. Evaluation on an independent test set is necessary to assess generalization performance.
+
 Hướng cải thiện tiếp theo là bổ sung dữ liệu huấn luyện, kiểm tra nhãn và tăng khả năng phân biệt giữa các cử chỉ tương đồng. Cần đánh giá trên tập dữ liệu độc lập để xác định khả năng tổng quát hóa của mô hình.
 ---
 
