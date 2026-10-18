@@ -75,8 +75,8 @@ Tất cả các thư viện Python cần thiết được liệt kê trong file 
 ### 1. Clone the repository | Clone repository
 
 ```bash
-git clone <YOUR_REPOSITORY_URL>
-cd SignMachine
+git clone https://github.com/winac2/signlang_test.git
+cd folder
 ```
 
 ---
