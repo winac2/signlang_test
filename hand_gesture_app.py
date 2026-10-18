@@ -52,6 +52,9 @@ class HandGestureApp:
         
         self.width = 640
         self.height = 480
+        
+        self.camera_resolution_width = 1272
+        self.camera_resolution_height = 954
 
         # ---------- HEADER ----------
         Label(
@@ -149,9 +152,8 @@ class HandGestureApp:
         if not self.running:
             self.cap = cv2.VideoCapture(0)
             
-            self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, self.width)
-            self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, self.height)
-            
+            self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, self.camera_resolution_width)
+            self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, self.camera_resolution_height)
 
             # frame = cv2.resize(self.cap, (self.width, self.height))
             actual_w = self.cap.get(cv2.CAP_PROP_FRAME_WIDTH)
@@ -289,8 +291,10 @@ class HandGestureApp:
             display_text = prediction.upper() if prediction else "NONE"
             self.prediction_label.config(text=f"GESTURE: {display_text}")
             # print(display_text)
+            
+            display_frame = cv2.resize(frame, (self.width, self.height)) #chỉnh displayframe-kích thước khi hiển thị
 
-            img = ImageTk.PhotoImage(Image.fromarray(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)))
+            img = ImageTk.PhotoImage(Image.fromarray(cv2.cvtColor(display_frame, cv2.COLOR_BGR2RGB)))
             self.video_label.imgtk = img
             self.video_label.configure(image=img)
 
