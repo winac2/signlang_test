@@ -10,7 +10,7 @@
 '''by "winac2-NSDK" - ndkhoi234@gmail.com'''
 
 
-""" trích xuất data có label - để xem """
+""" trích xuất data có label - để xem  bước này không cần thực hiện"""
 
 
 import os
