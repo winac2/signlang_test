@@ -1,5 +1,5 @@
 "SignMachine - winac2 - NSDK"
-"ROC curve evaluate"
+"ROC curve evaluate tuỳ chỉnh theo model - bộ data test"
 import numpy as np
 import pickle 
 import matplotlib.pyplot as plt

@@ -1,4 +1,4 @@
-# SignMachine
+# SignMachine - update 26.11
 
 > A real-time hand gesture recognition application designed to support communication for people with hearing and speech impairments.
 
