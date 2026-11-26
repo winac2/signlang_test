@@ -17,7 +17,7 @@ TEXT = {
     "drink": "bạn muốn uống gì ?",
     "iced": "hay đá",
     "hot": "nóng",
-    "thanks": "cảm ơn",
+    "thanks": "xin cảm ơn",
     
     "f":"f"
 }

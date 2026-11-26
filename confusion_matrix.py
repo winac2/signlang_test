@@ -17,8 +17,8 @@ from sklearn.model_selection import train_test_split
 # CONFIGURATION
 # ==========================================
 
-MODEL_PATH = "./models/hand_gesture_model_main_DrHeHoIcTh.pkl"
-DATA_PATH = "./data/processed_hand_data_test.csv"
+MODEL_PATH = "./models/hand_gesture_model_g1.pkl"
+DATA_PATH = "./data/processed_hand_data_test400HIKMN.csv"
 
 TEST_SIZE = 1
 RANDOM_STATE = 42

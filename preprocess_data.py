@@ -17,8 +17,8 @@ import cv2
 import mediapipe as mp
 
 # Đường dẫn dataset và file lưu dữ liệu sau xử lý
-DATASET_DIR = './dataset'
-OUTPUT_CSV_PATH = './data/processed_hand_data.csv'
+DATASET_DIR = './dataset/eva_ABCDE'
+OUTPUT_CSV_PATH = './data/processed_hand_data_test400ABCDE.csv'
 
 # Khởi tạo MediaPipe 
 mp_hands = mp.solutions.hands

@@ -39,7 +39,7 @@ TEXT = "#000000"
 BTN_GREEN = "#22c55e"
 BTN_RED = "#ef4444"
 
-HOLD_TIME = 0.75  # seconds
+HOLD_TIME = 0.35  # seconds
 threshold = 0.8
 
 class HandGestureApp:
@@ -183,10 +183,12 @@ class HandGestureApp:
     def speech_out(self):
         if self.message_words:
             engine = pyttsx3.init()
+            engine.setProperty('rate', 150)
             engine.say(" ".join(self.message_words))
             engine.runAndWait()
             
     def show_black_screen(self):
+        
         black_frame = np.zeros((self.height, self.width, 3), dtype=np.uint8)
         img = Image.fromarray(black_frame)
         imgtk = ImageTk.PhotoImage(image=img)
