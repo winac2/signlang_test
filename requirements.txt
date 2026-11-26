@@ -3,8 +3,5 @@ mediapipe==0.10.18
 numpy==1.26.4
 Pillow==12.0.0
 tensorflow
-<<<<<<< HEAD:requirements.txt
 scikit-learn
-=======
-scikit-learn
->>>>>>> 9a14ccd (update):requirments.txt
+pyttsx3
